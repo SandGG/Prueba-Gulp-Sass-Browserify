@@ -15,3 +15,10 @@ gulp.task('bundle', function(done) {
 
     done();
 });
+
+gulp.task("prueba", function () {
+    return browserify("script.js")
+    .transform(babelify, {presets: ['@babel/preset-env']})
+    .bundle()
+    .pipe(gulp.dest("dist"));
+});
