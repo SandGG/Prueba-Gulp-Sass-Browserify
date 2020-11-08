@@ -4,19 +4,7 @@ const gulp = require("gulp"),
     fs = require("fs");
 ;
 
-gulp.task("prueba1", function(done){
-    browserify({ debug: true })
-        .transform(babelify)
-        .require("./script.js", { entry: true })
-        .bundle()
-        .on("error", function (err) { console.log("Error: " + err.message); })
-        .pipe(fs.createWriteStream("bundle.js")
-    );
-
-    done();
-});
-
-gulp.task("prueba2", function(done){
+gulp.task("bundle", function(done){
     browserify({
         plugin: 
             [ [require('esmify')] ]
@@ -25,20 +13,7 @@ gulp.task("prueba2", function(done){
         .require("./script.js", { entry: true })
         .bundle()
         .on("error", function (err) { console.log("Error: " + err.message); })
-        .pipe(fs.createWriteStream("bundle.js")
-    );
+        .pipe(fs.createWriteStream("bundle.js"));
 
     done();
 });
-
-/*gulp.task("build3", function(done){
-    browserify('script.js')
-    .transform(babelify.configure({ 
-        presets:["es2015"] 
-    }))    
-    .bundle()
-    //.pipe(gulp.dest('./all.js'))
-
-    done();
-});*/
-
