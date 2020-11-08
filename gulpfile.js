@@ -1,7 +1,6 @@
 const gulp = require('gulp'),
     babelify = require('babelify'),
     browserify = require('browserify')
-    //fs = require("fs");
 ;
 
 gulp.task('bundle', function(done) {
@@ -12,8 +11,7 @@ gulp.task('bundle', function(done) {
     )
     .transform(babelify)
     .bundle()
-    //.pipe(fs.createWriteStream("bundle.js"));
-    .pipe(gulp.dest('./bundle.js'));
+    .pipe(gulp.dest('./'));
 
     done();
 });
