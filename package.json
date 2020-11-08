@@ -19,5 +19,11 @@
     "esmify": "^2.1.1",
     "gulp": "^4.0.2"
   },
+  "presets": ["@babel/preset-react"],
+  "env": {
+    "development": {
+      "presets": [["@babel/preset-react", { "development": true }]]
+    }
+  },
   "dependencies": {}
 }
