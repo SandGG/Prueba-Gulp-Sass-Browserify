@@ -5,22 +5,15 @@ const gulp = require('gulp'),
 ;
 
 gulp.task('bundle', function(done) {
-    gulp.watch("*.js", function() {
-        browserify({
-        plugin: 
-            [ [require('esmify')] ]
-        })
-        .transform(babelify)
-        .require('./script.js', { 
-            entry: true
-        })
-        .bundle()
-        .on('error', function (err) { 
-            console.log('Error: ' + err.message); 
-        })
-        //.pipe(gulp.src('script.js')
-        .pipe(gulp.dest('./bundle.js'));
-        //.pipe(fs.createWriteStream("bundle.js"));
-	});
+    browserify('script.js',
+        {
+            plugin: [ [require('esmify')] ]
+        }
+    )
+    .transform(babelify)
+    .bundle()
+    //.pipe(fs.createWriteStream("bundle.js"));
+    .pipe(gulp.dest('./bundle.js'));
+
     done();
 });
