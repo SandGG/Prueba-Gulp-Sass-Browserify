@@ -1,4 +1,4 @@
-export default class Orden {
+export class Orden {
 
   getDatos (tipo) {
     let tipoList = []

@@ -3,7 +3,7 @@ var cliente = require('./cliente');
 var orden = require('./orden');*/
 
 import {clean} from './funcionalidad';
-import Orden from './orden';
+import {Orden} from './orden';
 import {Cliente} from './cliente';
 
 var tipo = document.getElementsByClassName('form__input');
