@@ -1,9 +1,10 @@
+/*--------- LA MIA ---------
 const gulp = require('gulp'),
     babelify = require('babelify'),
     browserify = require('browserify')
 ;
 
-gulp.task('bundle', function(done) {
+gulp.task('bundle', function() {
     browserify('script.js',
         {
             plugin: [ [require('esmify')] ]
@@ -12,8 +13,6 @@ gulp.task('bundle', function(done) {
     .transform(babelify)
     .bundle()
     .pipe(gulp.dest('./'));
-
-    done();
 });
 
 gulp.task("prueba", function () {
@@ -21,4 +20,23 @@ gulp.task("prueba", function () {
     .transform(babelify, {presets: ['@babel/preset-env']})
     .bundle()
     .pipe(gulp.dest("dist"));
-});
+});*/
+
+
+const { dest } = require('gulp');
+const babelify = require('babelify');
+const browserify = require('browserify');
+var source = require('vinyl-source-stream'); 
+
+function build() {
+    var s = browserify("script.js")
+    .transform(babelify, {presets: ['@babel/preset-env']})
+    .bundle()
+    .pipe(source("./"));
+    
+    return s.pipe(dest("armado.js"));
+}
+
+exports.build = build;
+
+
