@@ -25,4 +25,5 @@ function watch () {
     gulp.watch('*.scss', css);
 }
 
-exports.default = gulp.parallel(watch, (gulp.series(js, css)));
+exports.default = gulp.series(js, css);
+exports.watch = watch;
