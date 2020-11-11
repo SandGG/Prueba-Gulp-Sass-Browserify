@@ -139,9 +139,6 @@ var _orden = require("./orden");
 
 var _cliente = require("./cliente");
 
-/*require('./funcionalidad');
-var cliente = require('./cliente');
-var orden = require('./orden');*/
 var tipo = document.getElementsByClassName('form__input');
 var pedirOrden = new _orden.Orden();
 document.querySelector('#agregarMenu').addEventListener('click', function () {

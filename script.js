@@ -1,7 +1,3 @@
-/*require('./funcionalidad');
-var cliente = require('./cliente');
-var orden = require('./orden');*/
-
 import {clean} from './funcionalidad';
 import {Orden} from './orden';
 import {Cliente} from './cliente';

@@ -18,6 +18,8 @@
     "browserify": "^17.0.0",
     "esmify": "^2.1.1",
     "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0",
+    "sass-module-importer": "^1.4.0",
     "vinyl-source-stream": "^2.0.0"
   },
   "presets": [
