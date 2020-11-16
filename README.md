@@ -60,7 +60,7 @@ npm i sass-module-importer --save-dev
 ## Armado del archivo gulpfile.js 
 1. Crear archivo gulpfile.js
 2. Copiar en el gulpfile.js:
-```javascritp
+```javascript
 const  gulp  = require('gulp'),
     babelify = require('babelify'),
     browserify = require('browserify'),
