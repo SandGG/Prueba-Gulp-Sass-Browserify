@@ -7,23 +7,23 @@ const  gulp  = require('gulp'),
 ; 
 
 function js () {
-    return  browserify('scripts/script.js')
+    return browserify('script.js')
     .transform(babelify, {presets: ['@babel/preset-env']})
     .bundle()
     .pipe(source('./'))
-    .pipe(gulp.dest('dist/main.js'));
+    .pipe(gulp.dest('armado.js'));
 }
 
 function css (){
-    return gulp.src('styles/estilo.scss')
+    return gulp.src('./estilo.scss')
     .pipe(sass( { importer: moduleImporter() } ))
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('./'));
 }
 
 function watch () {
-    gulp.watch('scripts/*.js', js); 
-    gulp.watch('styles/*.scss', css);
+    gulp.watch('*.js', js); 
+    gulp.watch('*.scss', css);
 }
 
 exports.default = gulp.series(js, css);
-exports.watch = watch;		
+exports.watch = watch;
