@@ -14,7 +14,7 @@ npm install –save-dev @babel/cli
 npm install –save-dev babel-preset-env
 ```
 4. Copiar en el package.json:
-```scriptshell
+```json
 ,
   "env": {
     "development": {
