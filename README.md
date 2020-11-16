@@ -2,7 +2,7 @@
 
 ## Preparar para Babel y Browserify 
 1. Crear archivo package.json
-```tab
+```
 npm init -y
 ```
 2. Instalar Babel
