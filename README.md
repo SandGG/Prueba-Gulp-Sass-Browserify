@@ -9,15 +9,16 @@
 	npm install –save-dev babel-preset-env
 4. Copiar en el package.json:
 ,
-     "babel": {
-      "presets": [
-         ["env", {
-           "targets": {
-             "browsers": ["last 2 versions", "safari >= 7"]
-           }
-         }]
-       ]
-     }
+  "env": {
+    "development": {
+      "targets": {
+        "browsers": [
+          "last 2 versions",
+          "safari >= 7"
+        ]
+      }
+    }
+  }
 5. Instalar Browserify
 //npm install --save-dev babelify @babel/core
   npm i -D browserify babelify
