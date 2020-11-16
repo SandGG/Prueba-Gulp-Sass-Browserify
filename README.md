@@ -120,6 +120,6 @@ body {
 }
 ```
 Otro.scss
-```sass
+```scss
 $color-background: pink;
 ```
