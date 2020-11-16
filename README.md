@@ -96,24 +96,30 @@ exports.watch = watch;
 
 ## Import para .js
 Main.js
+```javascript
 console.log('entra');
 
 import {mensajeOtro} from './otro';
 
 mensajeOtro();
-
+```
 Otro.js
+```javascript
 export function mensajeOtro () {
     console.log('Entra a Otro') 
 }
+```
 
 ## Import para .scss 
 Main.scss
+```sass
 @import 'otro';
 
 body {
     background: $color-background;
 }
-
+```
 Otro.scss
+```sass
 $color-background: pink;
+```
