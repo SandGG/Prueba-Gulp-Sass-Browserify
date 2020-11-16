@@ -70,26 +70,26 @@ const  gulp  = require('gulp'),
 ; 
 
 function js () {
-    return browserify('script.js')
+    return  browserify('scripts/script.js')
     .transform(babelify, {presets: ['@babel/preset-env']})
     .bundle()
     .pipe(source('./'))
-    .pipe(gulp.dest('armado.js'));
+    .pipe(gulp.dest('dist/main.js'));
 }
 
 function css (){
-    return gulp.src('./estilo.scss')
+    return gulp.src('styles/estilo.scss')
     .pipe(sass( { importer: moduleImporter() } ))
-    .pipe(gulp.dest('./'));
+    .pipe(gulp.dest('dist'));
 }
 
 function watch () {
-    gulp.watch('*.js', js); 
-    gulp.watch('*.scss', css);
+    gulp.watch('scripts/*.js', js); 
+    gulp.watch('styles/*.scss', css);
 }
 
 exports.default = gulp.series(js, css);
-exports.watch = watch;
+exports.watch = watch;		
 ```
 
 > Nota: No olvides crear el archivo .gitignore para no subir la carpeta node_modules al repositorio 
