@@ -6,10 +6,15 @@
 npm init -y
 ```
 2. Instalar Babel
-	npm install –save-dev @babel/cli
+```scritpshell
+npm install –save-dev @babel/cli
+```
 3. Instalar preset
-	npm install –save-dev babel-preset-env
+```scritpshell
+npm install –save-dev babel-preset-env
+```
 4. Copiar en el package.json:
+```scritpshell
 ,
   "env": {
     "development": {
@@ -21,23 +26,36 @@ npm init -y
       }
     }
   }
+  ```
 5. Instalar Browserify
+```scritpshell
 //npm install --save-dev babelify @babel/core
-  npm i -D browserify babelify
+npm i -D browserify babelify
+```
 6. Instalar preset-es2015
-  npm install --save-dev babel-preset-es2015 
+```scritpshell
+npm install --save-dev babel-preset-es2015 
+```
 
 ## Preparar para Gulp 
 1. Instalar Gulp
+```scritpshell
   npm install gulp
+```
 2. Instalar vinyl
-	npm install vinyl-source-stream --save-dev
+```scritpshell
+npm install vinyl-source-stream --save-dev
+```
 
 ## Preparar para Sass 
 1. Instalar gulp-sass
-  npm install --save-dev gulp-sass 
+```scritpshell
+npm install --save-dev gulp-sass 
+```
 2. Instalar sass.module-importer
-  npm i sass-module-importer --save-dev
+```scritpshell
+npm i sass-module-importer --save-dev
+```
 
 ## Armado del archivo gulpfile.js 
 1. Crear archivo gulpfile.js
