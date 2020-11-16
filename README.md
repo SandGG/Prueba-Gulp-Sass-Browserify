@@ -3,7 +3,7 @@
 ## Preparar para Babel y Browserify 
 1. Crear archivo package.json
 ```scriptshell
-npm init -y
+$ npm init -y
 ```
 2. Instalar Babel
 ```scriptshell
