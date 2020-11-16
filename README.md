@@ -40,7 +40,7 @@ npm install --save-dev babel-preset-es2015
 ## Preparar para Gulp 
 1. Instalar Gulp
 ```scritpshell
-  npm install gulp
+npm install gulp
 ```
 2. Instalar vinyl
 ```scritpshell
@@ -60,6 +60,7 @@ npm i sass-module-importer --save-dev
 ## Armado del archivo gulpfile.js 
 1. Crear archivo gulpfile.js
 2. Copiar en el gulpfile.js:
+```javascritp
 const  gulp  = require('gulp'),
     babelify = require('babelify'),
     browserify = require('browserify'),
@@ -88,9 +89,10 @@ function watch () {
 }
 
 exports.default = gulp.series(js, css);
-exports.watch = watch;									
+exports.watch = watch;
+```
 
-Nota: No olvides crear el archivo .gitignore para no subir la carpeta node_modules al repositorio 
+> Nota: No olvides crear el archivo .gitignore para no subir la carpeta node_modules al repositorio 
 
 ## Import para .js
 Main.js
