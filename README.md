@@ -1,6 +1,6 @@
 # Prueba-Gulp-Browserify-Sass
 
-## -- Preparar para Babel y Browserify –
+## Preparar para Babel y Browserify 
 1. Crear archivo package.json
 ```scriptshell
 npm init -y
@@ -27,19 +27,19 @@ npm init -y
 6. Instalar preset-es2015
   npm install --save-dev babel-preset-es2015 
 
-# -- Preparar para Gulp –
+## Preparar para Gulp 
 1. Instalar Gulp
   npm install gulp
 2. Instalar vinyl
 	npm install vinyl-source-stream --save-dev
 
-## -- Preparar para Sass –
+## Preparar para Sass 
 1. Instalar gulp-sass
   npm install --save-dev gulp-sass 
 2. Instalar sass.module-importer
   npm i sass-module-importer --save-dev
 
-## -- Armado del archivo gulpfile.js –
+## Armado del archivo gulpfile.js 
 1. Crear archivo gulpfile.js
 2. Copiar en el gulpfile.js:
 const  gulp  = require('gulp'),
@@ -74,7 +74,7 @@ exports.watch = watch;
 
 Nota: No olvides crear el archivo .gitignore para no subir la carpeta node_modules al repositorio 
 
-## -- Import para .js –-
+## Import para .js
 Main.js
 console.log('entra');
 
@@ -87,7 +87,7 @@ export function mensajeOtro () {
     console.log('Entra a Otro') 
 }
 
-## -- Import para .scss --
+## Import para .scss 
 Main.scss
 @import 'otro';
 
