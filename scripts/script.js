@@ -1,9 +1,6 @@
-import 'regenerator-runtime/runtime';
-import {Articulo} from './articulo';
-import {cleanInputs, getDatos} from './funcionalidad';
-
-const listInventario = [];
 var id = 0;
+var text= '<inventario>';
+const filename = 'inventario.xml';
 
 document.querySelector('#add').addEventListener('click', () => {
     id++;
@@ -11,36 +8,40 @@ document.querySelector('#add').addEventListener('click', () => {
     let valor = document.querySelector('#add_valor').value;
     let categoria = document.querySelector('#opc').value;
     if (descripcion != '' && valor != '' && categoria != '') {
-        const objArticulo = new Articulo (id, descripcion, valor, categoria);
-        listInventario.push(objArticulo);
+        saveData(id, descripcion, valor, categoria);
         cleanInputs();
     } else {
         console.log('Faltan datos');
     }
 });
 
-document.querySelector('#request').addEventListener('click', () => {
-    document.querySelector('#list').innerHTML = '<tr><td>ID</td><td>Descripcion</td><td>Valor</td><td>Categoria</td></tr>';
-    request();
+document.querySelector('#upload').addEventListener('click', () => {
+    text += '</inventario>'
+    let element = document.createElement('a');
+    element.setAttribute('href', 'data:text/xml;charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('download', filename);
+  
+    document.body.appendChild(element);
+    element.click();
+  
+    document.body.removeChild(element);
 });
 
-const getData = () => {
-    return new Promise((resolve, reject) => {
-        if (id == 0) {
-            reject(new Error ('Inventario vacio'));
-        }
-        setTimeout(() => {
-            resolve(listInventario);
-        }, 2000);
-    });
+function saveData(id, descripcion, valor, categoria) {
+    text += 
+    `<articulo> 
+        <id>${id}</id>
+        <descripcion>${descripcion}</descripcion>
+        <valor>${valor}</valor>
+        <categoria>${categoria}</categoria>
+    </articulo>`;
+    console.log(text); 
 }
-
-async function request () {
-    try {
-        const requestData = await getData();
-        console.log(requestData);
-        getDatos(requestData);
-    } catch (e) {
-        console.log(e.message);
+  
+function cleanInputs() {
+    let inputs = document.getElementsByClassName('form__input');
+    for (let i = 0; i < inputs.length; i++) {
+        inputs[i].value = '';
     }
-} 
+    document.querySelector('#opc').selectedIndex = 0;
+}
