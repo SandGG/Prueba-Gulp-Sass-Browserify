@@ -144,7 +144,7 @@ npm install express --save
 ```scriptshell
 node index.js
 ```
-3.3 Capiar en el navegador para ver el servidor
+3.3 Copiar en el navegador para ver el servidor
 ```
 http://localhost:3000/static/otro.html
 ```
