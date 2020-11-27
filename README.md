@@ -139,8 +139,7 @@ npm install express --save
 > (pendiente)
 
 ## 3. Ejecución de la petición http
-3.1 Ubicar en carpeta
-3.2 Inicar index.js
+3.1 Iniciar index.js
 ```scriptshell
 node index.js
 ```
