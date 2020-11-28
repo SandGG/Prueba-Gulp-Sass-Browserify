@@ -134,7 +134,7 @@ npm init -y
 ```scriptshell
 npm install express --save
 ```
-2.3 Crear archivo index.js 
+2.3 Crear archivo index.js  
 2.4 Copiar en el archivo index.js
 ```javascript
 const express = require('express');
@@ -144,6 +144,7 @@ app.use('/static', express.static(__dirname + '/static'));
 app.listen(3000);
 ```
 2.5 Crear carpeta static y cargar con todo lo que quieras relacionado con el servidor
+> Nota: Se deben hacer referencia a los archivos cargados al servidor desde la ruta '/static/archivo'
 ## 3. Ejecución de la petición http
 3.1 Iniciar index.js
 ```scriptshell
@@ -157,4 +158,3 @@ http://localhost:3000/static/otro.html
 ```
 http://localhost:3000/static/
 ```
-> Nota: Se deben hacer referencia a los archivos cargados al servidor desde la ruta '/static/archivo'
