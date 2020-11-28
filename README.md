@@ -1,19 +1,19 @@
 # Prueba-Gulp-Browserify-Sass
 
-## Preparar para Babel y Browserify 
-1. Crear archivo package.json
+## 1. Preparar para Babel y Browserify 
+1.1 Crear archivo package.json
 ```scriptshell
 npm init -y
 ```
-2. Instalar Babel
+1.2 Instalar Babel
 ```scriptshell
 npm install –save-dev @babel/cli
 ```
-3. Instalar preset
+1.3 Instalar preset
 ```scriptshell
 npm install –save-dev babel-preset-env
 ```
-4. Copiar en el package.json:
+1.4 Copiar en el package.json:
 ```json
 {
  "env": {
@@ -28,39 +28,39 @@ npm install –save-dev babel-preset-env
   }
 }
 ```
-5. Instalar Browserify
+1.5 Instalar Browserify
 ```scriptshell
 npm install --save-dev babelify @babel/core
 npm i -D browserify babelify
 ```
-6. Instalar preset-es2015
+1.6 Instalar preset-es2015
 ```scriptshell
 npm install --save-dev babel-preset-es2015 
 ```
 
 ## Preparar para Gulp 
-1. Instalar Gulp
+1.2.1 Instalar Gulp
 ```scriptshell
 npm install gulp
 ```
-2. Instalar vinyl
+1.2.2 Instalar vinyl
 ```scriptshell
 npm install vinyl-source-stream --save-dev
 ```
 
 ## Preparar para Sass 
-1. Instalar gulp-sass
+1.3.1 Instalar gulp-sass
 ```scriptshell
 npm install --save-dev gulp-sass 
 ```
-2. Instalar sass.module-importer
+1.3.2 Instalar sass-module-importer
 ```scriptshell
 npm i sass-module-importer --save-dev
 ```
 
 ## Armado del archivo gulpfile.js 
-1. Crear archivo gulpfile.js
-2. Copiar en el gulpfile.js:
+1.4.1 Crear archivo gulpfile.js
+1.4.2 Copiar en el gulpfile.js:
 ```javascript
 const  gulp  = require('gulp'),
     babelify = require('babelify'),
@@ -123,4 +123,27 @@ body {
 Otro.scss
 ```scss
 $color-background: pink;
+```
+
+## 2. Preparar para trabajar con peticiones http
+2.1 Crear archivo package.json
+```scriptshell
+npm init -y
+```
+2.2 Instalar Express
+```scriptshell
+npm install express --save
+```
+2.3 Crear archivo index.js 
+2.4 Copiar en el archivo index.js
+> (pendiente)
+
+## 3. Ejecución de la petición http
+3.1 Iniciar index.js
+```scriptshell
+node index.js
+```
+3.2 Copiar en el navegador para ver el servidor
+```
+http://localhost:3000/static/otro.html
 ```
