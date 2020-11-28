@@ -144,7 +144,7 @@ app.use('/static', express.static(__dirname + '/static'));
 app.listen(3000);
 ```
 2.5 Crear carpeta static y cargar con todo lo que quieras relacionado con el servidor
-> Nota: Se deben hacer referencia a los archivos cargados al servidor desde la ruta '/static/archivo'
+> Nota: Se debe hacer referencia a los archivos cargados al servidor desde la ruta '/static/archivo'
 ## 3. Ejecución de la petición http
 3.1 Iniciar index.js
 ```scriptshell
