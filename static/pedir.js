@@ -8,6 +8,6 @@ get.addEventListener('click', () => {
       response.innerHTML = http.responseText;
     }
   };
-  http.open('GET', 'otro.html', true);
+  http.open('GET', '/static/otro.html', true);
   http.send();
 });
